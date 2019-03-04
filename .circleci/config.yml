@@ -116,7 +116,7 @@ jobs:
           name: Publish the library
           command: |
             sbt ";clean;retrieveGPGKeys"
-            sbt ";+publishSigned;sonatypeReleaseAll"
+            sbt ";publishSigned;sonatypeReleaseAll"
       - *clean_sbt_cache
       - *save_sbt_cache
 
