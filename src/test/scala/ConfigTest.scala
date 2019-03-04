@@ -65,14 +65,14 @@ class ConfigTest extends TestUtils {
     System.setProperty("config.strategy", classOf[com.codacy.config.EnvFirstConfigLoadingStrategy].getCanonicalName)
 
     try {
-        val conf = ConfigFactory.load()
+      val conf = ConfigFactory.load()
 
-        val list = conf.getIntList("testList")
+      val list = conf.getIntList("testList")
 
-        assertEquals(0, list.get(0))
-        assertEquals(1, list.get(1))
+      assertEquals(0, list.get(0))
+      assertEquals(1, list.get(1))
     } finally {
-        System.clearProperty("config.strategy")
+      System.clearProperty("config.strategy")
     }
   }
 
