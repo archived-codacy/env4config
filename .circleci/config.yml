@@ -154,10 +154,10 @@ workflows:
         context: CodacyAWS
         requires:
         - populate_cache
-    # - coverage:
-    #     context: CodacyAWS
-    #     requires:
-    #     - populate_cache
+    - coverage:
+        context: CodacyAWS
+        requires:
+        - populate_cache
     - publish:
         filters:
           branches:
