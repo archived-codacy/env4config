@@ -34,3 +34,11 @@ fork in Test := true
 cancelable in Global := true
 
 publicMvnPublish
+
+jacocoReportSettings := JacocoReportSettings(
+  "Jacoco Coverage Report",
+  None,
+  JacocoThresholds(),
+  Seq(JacocoReportFormats.ScalaHTML, JacocoReportFormats.XML),
+  "utf-8"
+)

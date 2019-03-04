@@ -102,7 +102,10 @@ jobs:
       - *restore_sbt_cache
       - run:
           name: Coverage
-          command: sbt ";clean ;coverage ;test ;coverageReport ;coverageAggregate ;codacyCoverage"
+          command: |
+            sbt jacoco
+            wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r '.assets[0].browser_download_url')
+            java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r target/jacoco/report/jacoco.xml
       - *clean_sbt_cache
       - *save_sbt_cache
 
