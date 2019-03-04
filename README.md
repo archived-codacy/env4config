@@ -1,7 +1,7 @@
 
 # ENV4CONFIG
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c811f6b557ee4e44ad373084015ba0b3)](https://www.codacy.com/app/Codacy/env2props?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/env4config&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8993cbf343254735bd58ce9b84765d2f)](https://www.codacy.com/app/Codacy/env4config?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/env4config&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/codacy/env4config.svg?style=svg)](https://circleci.com/gh/codacy/env4config)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.codacy/env4config/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.codacy/env4config)
 
