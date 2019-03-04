@@ -8,6 +8,8 @@
 
 This is an alternative `config.strategy` for [Typesafe Config](https://github.com/lightbend/config) to enable Environment Variable substitution on every configuration key without the need to explicitly bind the substitution in the configuration file.
 
+Please note that this library is published as a road unblocker until [this PR](https://github.com/lightbend/config/pull/620) find it's way upstream.
+
 ## Conventions
 
 Each environment variable is transformed as follows:
@@ -37,9 +39,7 @@ According to the [Twelve-factor App](https://12factor.net/config) the configurat
 
 The "de-facto" standard for configuration in Scala application is [Typesafe Config](https://github.com/lightbend/config) and env variables are a [supported fallback](https://github.com/lightbend/config#optional-system-or-env-variable-overrides); still it is not possible to override *virtually* any configuration of our application if not properly encoded the binding accordingly.
 
-Although [Typesafe Config](https://github.com/lightbend/config#overview) offers a first class integration with Java system properties:
-
-> users can override the config with Java system properties
+Although [Typesafe Config](https://github.com/lightbend/config#overview) offers an hook as a `config.strategy` to tune the initial loading order of configurations, leveraging it is possible to load Environment variables first.
 
 This makes it easy to bridge the gap and by having a standard way to convert environment variables into Java system properties make it possible to fully comply with [Twelve-factor App](https://12factor.net/config).
 
