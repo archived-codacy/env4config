@@ -3,7 +3,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c811f6b557ee4e44ad373084015ba0b3)](https://www.codacy.com/app/Codacy/env2props?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/env4config&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/codacy/env4config.svg?style=svg)](https://circleci.com/gh/codacy/env4config)
-[![](https://img.shields.io/endpoint.svg?url=https://circleci.com/api/v1.1/project/github/codacy/env4config/latest/artifacts/0/version.json)](https://github.com/codacy/env4config/releases)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.codacy/env4config/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.codacy/env4config)
 
 
 This is an alternative `config.strategy` for [Typesafe Config](https://github.com/lightbend/config) to enable Environment Variable substitution on every configuration key without the need to explicitly bind the substitution in the configuration file.
