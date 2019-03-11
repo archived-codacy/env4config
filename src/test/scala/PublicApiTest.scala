@@ -22,7 +22,7 @@ class PublicApiTest extends TestUtils {
   def supportsEnvFirstConfigLoadingStrategy(): Unit = {
     assertEquals("config.strategy is not set", null, System.getProperty("config.strategy"))
 
-    TestEnvFirstStrategy.putEnvVar("CONFIG_a", "5")
+    TestEnvFirstStrategy.putEnvVar("CONFIG_FORCE_a", "5")
     System.setProperty("config.strategy", classOf[com.codacy.config.EnvFirstConfigLoadingStrategy].getCanonicalName)
 
     try {
@@ -38,7 +38,7 @@ class PublicApiTest extends TestUtils {
       assertEquals(5, configA1.getInt("a"))
     } finally {
       System.clearProperty("config.strategy")
-      TestEnvFirstStrategy.removeEnvVar("CONFIG_a")
+      TestEnvFirstStrategy.removeEnvVar("CONFIG_FORCE_a")
     }
   }
 

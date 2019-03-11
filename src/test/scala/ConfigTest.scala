@@ -11,13 +11,13 @@ class ConfigTest extends TestUtils {
 
   @Test
   def testLoadWithEnvSubstitutions() {
-    TestEnvFirstStrategy.putEnvVar("CONFIG_42___a", "1")
-    TestEnvFirstStrategy.putEnvVar("CONFIG_a_b_c", "2")
-    TestEnvFirstStrategy.putEnvVar("CONFIG_a__c", "3")
-    TestEnvFirstStrategy.putEnvVar("CONFIG_a___c", "4")
+    TestEnvFirstStrategy.putEnvVar("CONFIG_FORCE_42___a", "1")
+    TestEnvFirstStrategy.putEnvVar("CONFIG_FORCE_a_b_c", "2")
+    TestEnvFirstStrategy.putEnvVar("CONFIG_FORCE_a__c", "3")
+    TestEnvFirstStrategy.putEnvVar("CONFIG_FORCE_a___c", "4")
 
-    TestEnvFirstStrategy.putEnvVar("CONFIG_akka_version", "foo")
-    TestEnvFirstStrategy.putEnvVar("CONFIG_akka_event__handler__dispatcher_max__pool__size", "10")
+    TestEnvFirstStrategy.putEnvVar("CONFIG_FORCE_akka_version", "foo")
+    TestEnvFirstStrategy.putEnvVar("CONFIG_FORCE_akka_event__handler__dispatcher_max__pool__size", "10")
 
     System.setProperty("config.strategy", classOf[com.codacy.config.EnvFirstConfigLoadingStrategy].getCanonicalName)
 
@@ -50,13 +50,13 @@ class ConfigTest extends TestUtils {
     } finally {
       System.clearProperty("config.strategy")
 
-      TestEnvFirstStrategy.removeEnvVar("CONFIG_42___a")
-      TestEnvFirstStrategy.removeEnvVar("CONFIG_a_b_c")
-      TestEnvFirstStrategy.removeEnvVar("CONFIG_a__c")
-      TestEnvFirstStrategy.removeEnvVar("CONFIG_a___c")
+      TestEnvFirstStrategy.removeEnvVar("CONFIG_FORCE_42___a")
+      TestEnvFirstStrategy.removeEnvVar("CONFIG_FORCE_a_b_c")
+      TestEnvFirstStrategy.removeEnvVar("CONFIG_FORCE_a__c")
+      TestEnvFirstStrategy.removeEnvVar("CONFIG_FORCE_a___c")
 
-      TestEnvFirstStrategy.removeEnvVar("CONFIG_akka_version")
-      TestEnvFirstStrategy.removeEnvVar("CONFIG_akka_event__handler__dispatcher_max__pool__size")
+      TestEnvFirstStrategy.removeEnvVar("CONFIG_FORCE_akka_version")
+      TestEnvFirstStrategy.removeEnvVar("CONFIG_FORCE_akka_event__handler__dispatcher_max__pool__size")
     }
   }
 

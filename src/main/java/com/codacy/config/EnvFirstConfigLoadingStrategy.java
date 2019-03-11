@@ -47,7 +47,7 @@ public class EnvFirstConfigLoadingStrategy extends DefaultConfigLoadingStrategy 
     public Config parseApplicationConfig(ConfigParseOptions parseOptions) {
         String envVarPrefix = System.getProperty("config.env_var_prefix");
         if (envVarPrefix == null) // fallback to default
-            envVarPrefix = "CONFIG_";
+            envVarPrefix = "CONFIG_FORCE_";
 
         Map<String, String> defaultsFromEnv = new HashMap();
         for (String key : env.keySet()) {

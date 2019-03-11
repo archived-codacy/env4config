@@ -28,7 +28,7 @@ javacOptions += "-Xdoclint:none"
 
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v")
 
-Test / envVars ++= Map("CONFIG_testList_0" -> "0", "CONFIG_testList_1" -> "1")
+Test / envVars ++= Map("CONFIG_FORCE_testList_0" -> "0", "CONFIG_FORCE_testList_1" -> "1")
 
 fork in Test := true
 cancelable in Global := true
