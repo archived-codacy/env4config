@@ -14,7 +14,7 @@ Please note that this library is published as a road unblocker until [this PR](h
 
 Each environment variable is transformed as follows:
 
- - remove the trailing prefix `config.env_var_prefix` ( Default: `CONFIG_`)
+ - remove the trailing prefix `config.env_var_prefix` ( Default: `CONFIG_FORCE_`)
  - trasform all the `_` characters into `.`
  - trasform all the `__` characters into `-`
  - trasform all the `___` characters into `_`
